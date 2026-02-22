@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivani Mourya — Portfolio</title>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <span onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})" class="logo" style="cursor:pointer;">SHIVANI.</span>
+  <nav>
+    <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</button>
+    <button class="nav-btn" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Skills</button>
+    <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Projects</button>
+    <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Cybersecurity Student · Open to Internships</div>
+    <h1>
+      <span class="line">Shivani</span>
+      <span class="line accent-word">Mourya</span>
+    </h1>
+    <p class="hero-sub">Cybersecurity Enthusiast & Offensive Security Learner — hunting vulnerabilities, building defences, and breaking things ethically. <span class="typewriter-cursor"></span></p>
+    <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})" class="btn">View My Work →</button>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<!-- <div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div> -->
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">Who I Am</div>
+  <div class="about-grid">
+    <div class="about-image-wrap">
+      <div class="about-image">
+        <div class="about-image-inner">
+          <!-- Animated Cybersecurity Illustration -->
+          <div class="cyber-illustration">
+            <!-- Floating binary rain -->
+            <div class="bin-rain">
+              <span class="bin-col" style="left:8%;animation-delay:0s">1<br>0<br>1<br>1<br>0<br>0<br>1<br>0<br>1</span>
+              <span class="bin-col" style="left:18%;animation-delay:0.4s">0<br>1<br>0<br>0<br>1<br>1<br>0<br>1<br>0</span>
+              <span class="bin-col" style="left:28%;animation-delay:0.8s">1<br>1<br>0<br>1<br>0<br>1<br>1<br>0<br>1</span>
+              <span class="bin-col" style="left:72%;animation-delay:0.2s">0<br>1<br>1<br>0<br>1<br>0<br>0<br>1<br>1</span>
+              <span class="bin-col" style="left:82%;animation-delay:0.6s">1<br>0<br>0<br>1<br>1<br>0<br>1<br>0<br>0</span>
+              <span class="bin-col" style="left:92%;animation-delay:1s">0<br>0<br>1<br>0<br>1<br>1<br>0<br>1<br>1</span>
+            </div>
+
+            <!-- Central SVG figure -->
+            <svg class="cyber-svg" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <!-- Glow filter -->
+              <defs>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="glow2">
+                  <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <!-- Shield background glow -->
+              <ellipse cx="100" cy="200" rx="70" ry="15" fill="rgba(0,255,65,0.08)"/>
+
+              <!-- Hoodie body -->
+              <path d="M55 160 Q55 130 65 120 L80 115 Q100 125 120 115 L135 120 Q145 130 145 160 L145 200 L55 200 Z"
+                    fill="#0d1f35" stroke="rgba(0,255,65,0.4)" stroke-width="1.5"/>
+              <!-- Hood -->
+              <path d="M65 120 Q70 95 100 90 Q130 95 135 120 Q120 112 100 112 Q80 112 65 120 Z"
+                    fill="#0a1828" stroke="rgba(0,255,65,0.3)" stroke-width="1"/>
+              <!-- Hoodie pocket -->
+              <rect x="80" y="165" width="40" height="22" rx="3"
+                    fill="none" stroke="rgba(0,255,65,0.25)" stroke-width="1"/>
+
+              <!-- Head -->
+              <circle cx="100" cy="88" r="24" fill="#0d1f35" stroke="rgba(0,255,65,0.5)" stroke-width="1.5"/>
+
+              <!-- Mask / balaclava over lower face -->
+              <path d="M78 92 Q78 112 100 112 Q122 112 122 92 Z"
+                    fill="#071018" stroke="rgba(0,255,65,0.35)" stroke-width="1"/>
+
+              <!-- Eyes — glowing cyan -->
+              <ellipse cx="91" cy="84" rx="6" ry="4" fill="#001a22" stroke="#00ff41" stroke-width="1" filter="url(#glow)"/>
+              <ellipse cx="109" cy="84" rx="6" ry="4" fill="#001a22" stroke="#00ff41" stroke-width="1" filter="url(#glow)"/>
+              <!-- Eye pupils -->
+              <ellipse cx="91" cy="84" rx="3" ry="2.5" fill="#00ff41" opacity="0.9"/>
+              <ellipse cx="109" cy="84" rx="3" ry="2.5" fill="#00ff41" opacity="0.9"/>
+
+              <!-- Laptop base -->
+              <rect x="50" y="188" width="100" height="8" rx="2" fill="#0a1520" stroke="rgba(0,255,65,0.4)" stroke-width="1"/>
+              <!-- Laptop screen -->
+              <rect x="55" y="148" width="90" height="42" rx="3" fill="#040d14" stroke="rgba(0,255,65,0.6)" stroke-width="1.5" filter="url(#glow)"/>
+              <!-- Screen content lines -->
+              <rect x="62" y="155" width="40" height="2" rx="1" fill="#00ff41" opacity="0.7"/>
+              <rect x="62" y="161" width="60" height="2" rx="1" fill="#00ff41" opacity="0.5"/>
+              <rect x="62" y="167" width="30" height="2" rx="1" fill="#00cc33" opacity="0.6"/>
+              <rect x="62" y="173" width="50" height="2" rx="1" fill="#00ff41" opacity="0.4"/>
+              <rect x="62" y="179" width="25" height="2" rx="1" fill="#00ff41" opacity="0.7"/>
+              <!-- Blinking cursor on screen -->
+              <rect x="90" y="179" width="6" height="2" rx="1" fill="#00ff41" opacity="0.9">
+                <animate attributeName="opacity" values="0.9;0;0.9" dur="1s" repeatCount="indefinite"/>
+              </rect>
+
+              <!-- Arms -->
+              <path d="M65 130 Q45 150 52 188" stroke="rgba(0,255,65,0.3)" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <path d="M135 130 Q155 150 148 188" stroke="rgba(0,255,65,0.3)" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <!-- Hands on keyboard -->
+              <ellipse cx="56" cy="190" rx="9" ry="5" fill="#0d1f35" stroke="rgba(0,255,65,0.3)" stroke-width="1"/>
+              <ellipse cx="144" cy="190" rx="9" ry="5" fill="#0d1f35" stroke="rgba(0,255,65,0.3)" stroke-width="1"/>
+
+              <!-- Floating shield icon top-right -->
+              <g transform="translate(148,20)" filter="url(#glow2)">
+                <path d="M16 0 L32 8 L32 20 Q32 30 16 36 Q0 30 0 20 L0 8 Z"
+                      fill="none" stroke="#00ff41" stroke-width="1.5" opacity="0.8">
+                  <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
+                </path>
+                <path d="M10 18 L14 22 L22 14" stroke="#00ff41" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </g>
+
+              <!-- Floating lock icon top-left -->
+              <g transform="translate(10,30)" filter="url(#glow)">
+                <rect x="4" y="12" width="16" height="12" rx="2" fill="none" stroke="#00cc33" stroke-width="1.5" opacity="0.8">
+                  <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+                </rect>
+                <path d="M7 12 L7 8 Q7 3 12 3 Q17 3 17 8 L17 12" fill="none" stroke="#00cc33" stroke-width="1.5"/>
+                <circle cx="12" cy="17" r="2" fill="#00cc33" opacity="0.8"/>
+              </g>
+
+              <!-- Scan line across screen -->
+              <rect x="55" y="148" width="90" height="2" fill="rgba(0,255,65,0.5)" opacity="0">
+                <animate attributeName="y" values="148;188;148" dur="2.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.6;0" dur="2.5s" repeatCount="indefinite"/>
+              </rect>
+            </svg>
+
+            <!-- Floating tags around figure -->
+             <div class="float-tag ft1">nmap</div>
+            <div class="float-tag ft2">CTF</div>
+            <div class="float-tag ft3">0x41</div>
+            <div class="float-tag ft4">shell</div>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <h2>Breaking things ethically, one packet at a time.</h2>
+      <p>Hey! I'm Shivani — a Cybersecurity student currently pursuing my degree, with a strong passion for offensive security, threat analysis, and building tools that expose and defend against real-world attacks.</p>
+      <p>Being in college gives me the perfect environment to experiment, learn, and build — from setting up home labs and running CTF challenges to developing honeypots and AI-powered security tools as personal projects.</p>
+      <p>My focus sits at the intersection of offensive and defensive security: I love understanding how attacks work so I can build better defences. Whether it's scanning networks with Nmap, analysing packets in Wireshark, or training ML models to catch prompt injection — I'm always learning.</p>
+
+      <!-- CURRENTLY LEARNING -->
+      <div class="learning-section">
+        <div class="learning-label"><span class="learning-dot"></span> Currently Learning</div>
+        <div class="learning-pills">
+          <span class="lpill">🔴 Web App Pentesting</span>
+          <span class="lpill">🟡 Malware Analysis</span>
+          <span class="lpill">🔵 Active Directory Attacks</span>
+          <span class="lpill">🟢 CTF Challenges</span>
+          <span class="lpill">🟣 Reverse Engineering</span>
+        </div>
+      </div>
+
+    
+
+      <!-- PLATFORMS -->
+      <div class="about-platforms">
+        <div class="platform-label">Active On</div>
+        <div class="platform-grid">
+          <div class="platform-card">
+            <span class="platform-icon">🟥</span>
+            <div>
+              <div class="platform-name">TryHackMe</div>
+              <div class="platform-rank">10+ rooms</div>
+            </div>
+          </div>
+          <div class="platform-card">
+            <span class="platform-icon">🟩</span>
+            <div>
+              <div class="platform-name">HackTheBox</div>
+              <div class="platform-rank">Script Kiddie</div>
+            </div>
+          </div>
+          <!-- <div class="platform-card">
+            <span class="platform-icon">🏁</span>
+            <div>
+              <div class="platform-name">CTF Competitions</div>
+              <div class="platform-rank">PicoCTF, NahamCon, OSCTF</div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+    </div><!-- /about-text -->
+  </div><!-- /about-grid -->
+</section><!-- /about -->
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">What I Do</div>
+  <h2 class="reveal">Skills &amp; Expertise</h2>
+  <div class="skills-grid">
+
+    <!-- CYBERSECURITY SKILL CARD 1 -->
+    <div class="skill-card skill-cyber">
+      <div class="skill-cyber-glow"></div>
+      <span class="skill-icon cyber-skill-icon">🔍</span>
+      <div class="skill-name">Network Security &amp; Analysis</div>
+      <p style="color:var(--muted);font-size:0.9rem;">Scanning, sniffing, and analysing network traffic to detect threats and vulnerabilities.</p>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Nmap / Zenmap</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="88"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Wireshark / tcpdump</span><span>82%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="82"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Metasploit Framework</span><span>70%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="70"></div></div>
+      </div>
+      <div class="skill-tags" style="margin-top:16px;">
+        <span class="tag cyber-tag">Nmap</span>
+        <span class="tag cyber-tag">Wireshark</span>
+        <span class="tag cyber-tag">tcpdump</span>
+        <span class="tag cyber-tag">Metasploit</span>
+        <span class="tag cyber-tag">Burp Suite</span>
+      </div>
+    </div>
+
+    <!-- CYBERSECURITY SKILL CARD 2 -->
+    <div class="skill-card skill-cyber">
+      <div class="skill-cyber-glow"></div>
+      <span class="skill-icon cyber-skill-icon">🛡️</span>
+      <div class="skill-name">Defensive Security</div>
+      <p style="color:var(--muted);font-size:0.9rem;">Protecting systems through SIEM monitoring, incident response, and hardening techniques.</p>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>SIEM / Splunk / ELK</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="80"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Firewall / IDS / IPS</span><span>76%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="76"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Incident Response</span><span>72%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="72"></div></div>
+      </div>
+      <div class="skill-tags" style="margin-top:16px;">
+        <span class="tag cyber-tag">Splunk</span>
+        <span class="tag cyber-tag">Snort / Suricata</span>
+        <span class="tag cyber-tag">MITRE ATT&amp;CK</span>
+        <span class="tag cyber-tag">OSINT</span>
+        <span class="tag cyber-tag">CVE Analysis</span>
+      </div>
+    </div>
+
+    <!-- CYBERSECURITY SKILL CARD 3 -->
+    <div class="skill-card skill-cyber">
+  <div class="skill-cyber-glow"></div>
+  <span class="skill-icon cyber-skill-icon">🎯</span>
+  <div class="skill-name">Threat Analysis</div>
+  <p style="color:var(--muted);font-size:0.9rem;">Identifying, investigating and classifying threats using intelligence frameworks and malware analysis techniques.</p>
+  <div class="skill-bar-wrap">
+    <div class="skill-bar-label"><span>Malware Analysis</span><span>74%</span></div>
+    <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="74"></div></div>
+  </div>
+  <div class="skill-bar-wrap">
+    <div class="skill-bar-label"><span>Threat Intelligence</span><span>78%</span></div>
+    <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="78"></div></div>
+  </div>
+  <div class="skill-bar-wrap">
+    <div class="skill-bar-label"><span>Log Analysis / SIEM</span><span>80%</span></div>
+    <div class="skill-bar"><div class="skill-bar-fill cyber-bar" data-width="80"></div></div>
+  </div>
+  <div class="skill-tags" style="margin-top:16px;">
+    <span class="tag cyber-tag">MITRE ATT&CK</span>
+    <span class="tag cyber-tag">VirusTotal</span>
+    <span class="tag cyber-tag">YARA Rules</span>
+    <span class="tag cyber-tag">IOC Analysis</span>
+    <span class="tag cyber-tag">Threat Hunting</span>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Selected Work</div>
+  <h2 class="reveal">Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card p-cyber1">
+      <div class="project-thumb">
+        <div class="project-thumb-bg"></div>
+        <span class="cyber-icon">🍯</span>
+        <div class="cyber-scan-line"></div>
+      </div>
+      <div class="project-body">
+        <div class="project-meta">Cybersecurity ·</div>
+        <div class="project-title">HoneyTrap — Advanced Honeypot System</div>
+        <p class="project-desc">A deceptive network honeypot that mimics real services (SSH, FTP, HTTP) to lure, log, and analyse attacker behaviour in real time. Built with Python and Elasticsearch.</p>
+        <div class="project-tags-cyber">
+          <span class="ctag">Python</span>
+          <span class="ctag">Elasticsearch</span>
+          <span class="ctag">Networking</span>
+          <span class="ctag">Threat Intel</span>
+        </div>
+        <div class="project-links" style="margin-top:20px;">
+          <button class="project-link" onclick="showProjectModal('HoneyTrap — Honeypot System','A multi-service honeypot that simulates SSH, FTP and HTTP servers to capture and analyse attacker TTPs in real time using Elasticsearch dashboards and GeoIP tracking.')">Details ↗</button>
+          <button class="project-link ghost" onclick="showProjectModal('HoneyTrap — GitHub','Python-based honeypot framework. Supports custom service emulation, live alerting via Slack, and full packet capture logging.')">GitHub →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card p-cyber2">
+      <div class="project-thumb">
+        <div class="project-thumb-bg"></div>
+        <span class="cyber-icon">🧠</span>
+        <div class="cyber-scan-line"></div>
+      </div>
+      <div class="project-body">
+        <div class="project-meta">AI · Security ·</div>
+        <div class="project-title">PromptShield — AI Prompt Injection Detector</div>
+        <p class="project-desc">A real-time detection engine that identifies prompt injection and jailbreak attempts against LLM-powered applications using fine-tuned BERT classifiers and heuristic rule sets.</p>
+        <div class="project-tags-cyber">
+          <span class="ctag">Python</span>
+          <span class="ctag">BERT / NLP</span>
+          <span class="ctag">FastAPI</span>
+          <span class="ctag">LLM Security</span>
+        </div>
+        <div class="project-links" style="margin-top:20px;">
+          <button class="project-link" onclick="showProjectModal('PromptShield — AI Prompt Injection Detector','Detects prompt injection, jailbreaks, and adversarial inputs against LLM apps. Uses a fine-tuned BERT model trained on 50k+ labelled attack samples combined with regex heuristics for near zero-latency classification.')">Details ↗</button>
+          <button class="project-link ghost" onclick="showProjectModal('PromptShield — GitHub','FastAPI microservice with pluggable classifier backends. Includes a live demo UI, REST API, and a labelled dataset of 50k+ prompt injection examples.')">GitHub →</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="max-width:none;background:var(--bg);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-label">Get In Touch</div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h2>Let's build something great together.</h2>
+        <p>Whether you have a project in mind, a question, or just want to say hello — my inbox is always open.</p>
+        <div class="contact-detail">
+          <div class="contact-item"><span>📧</span><span>shivanimourya9955@gmail.com</span></div>
+          <div class="contact-item"><span>📍</span><span>Pune,INDIA</span></div>
+        </div>
+      </div>
+      <div>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter Your Name">
+            <span class="error-msg" id="nameError">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="abc@example.com">
+            <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell me about your project..."></textarea>
+            <span class="error-msg" id="messageError">Please write a message.</span>
+          </div>
+          <button type="submit" class="btn" style="width:100%;justify-content:center;">Send Message →</button>
+          <div class="success-msg" id="successMsg">
+            ✓ Message sent! Thank you — I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK DISPLAY -->
+<div id="feedback-display">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="feedback-title">Messages from Visitors</div>
+    <div class="feedback-list" id="feedbackList">
+      <p class="no-feedback" id="noFeedback">No messages yet. Be the first!</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 Shivani Mourya. Crafted with ♥</div>
+  <div class="social-links">
+<a class="social-link" href="https://github.com/shivani-netsec/Cybersecurity-notes" target="_blank">GitHub</a>
+<a class="social-link" href="https://www.linkedin.com/in/shivani-mourya-7722473a8/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
